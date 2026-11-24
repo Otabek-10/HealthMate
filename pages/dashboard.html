@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shaxsiy kabinet — HealthMate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    />
+    <link rel="stylesheet" href="../css/app.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar-app" id="sidebar" aria-label="Asosiy menyu">
+        <a class="s-logo" href="../index.html" aria-label="HealthMate — bosh sahifa">
+          <span class="s-logo-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19.5 12.6 12 20l-7.5-7.4a4.9 4.9 0 0 1 0-7 5 5 0 0 1 7 0l.5.5.5-.5a5 5 0 0 1 7 0 4.9 4.9 0 0 1 0 7Z"/></svg></span>
+          <span class="s-logo-text">Health<span class="accent">Mate</span></span>
+        </a>
+
+        <nav class="s-nav">
+          <a class="s-link is-active" href="dashboard.html" aria-current="page"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg> Shaxsiy kabinet</a>
+          <a class="s-link" href="ai.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/><path d="M19 3v4M17 5h4"/></svg> AI yordamchi</a>
+          <a class="s-link" href="tracker.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg> Kunlik odatlar</a>
+          <a class="s-link" href="nutrition.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3v8M4 3v5a3 3 0 0 0 6 0V3M7 11v10"/><path d="M17 21V3c-2.5 1.5-4 4.5-4 8h4"/></svg> Ovqatlanish</a>
+          <a class="s-link" href="reports.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M8 17v-5M13 17V8M18 17v-9"/></svg> Hisobotlar</a>
+        </nav>
+
+        <div class="s-bottom">
+          <div class="weekly">
+            <span class="accent"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/><path d="M19 3v4M17 5h4"/></svg></span>
+            <div class="weekly-title">Haftalik natija</div>
+            <div class="weekly-sub">Maqsadlaringizning 82% bajarildi!</div>
+            <div class="progress" style="--p: 82%"><span></span></div>
+          </div>
+          <a class="user-box" href="dashboard.html">
+            <span class="user-avatar" data-user-initials>MK</span>
+            <div>
+              <div class="user-name" data-user-full>Madina Karimova</div>
+              <div class="user-sub">Shaxsiy reja</div>
+            </div>
+            <span class="go"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></span>
+          </a>
+        </div>
+      </aside>
+
+      <div class="overlay"></div>
+
+      <div class="content">
+        <header class="topbar">
+          <button class="menu-btn" type="button" aria-label="Menyuni ochish" aria-controls="sidebar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+          <button class="icon-btn" type="button" aria-label="Bildirishnomalar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg><span class="dot"></span></button>
+          <span class="top-avatar" aria-hidden="true" data-user-initials>MK</span>
+        </header>
+
+        <main class="page">
+
+          <div class="page-head">
+            <div>
+              <h1 class="page-title">Xush kelibsiz, <span data-user-name>Madina</span>!</h1>
+              <p class="page-sub">Bugun — <span data-today>18-may, yakshanba</span>. Sog‘lom kun uchun tayyormisiz?</p>
+            </div>
+            <a class="btn" href="tracker.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Ma’lumot qo‘shish</a>
+          </div>
+
+          <section class="score-hero" aria-label="Bugungi salomatlik ko‘rsatkichi">
+            <span class="heart"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19.5 12.6 12 20l-7.5-7.4a4.9 4.9 0 0 1 0-7 5 5 0 0 1 7 0l.5.5.5-.5a5 5 0 0 1 7 0 4.9 4.9 0 0 1 0 7Z"/></svg></span>
+            <div>
+              <div class="lbl">Bugungi salomatlik ko‘rsatkichi</div>
+              <div class="big">86<small>/100</small></div>
+              <div class="delta">Kecha bilan solishtirganda <b>+4 ball</b></div>
+            </div>
+            <div class="ring-wrap on-dark" data-ring="86" data-size="92" data-stroke="7" style="width:92px;height:92px"><svg width="92" height="92" viewBox="0 0 92 92" aria-hidden="true"><circle class="track" cx="46" cy="46" r="42.5" stroke-width="7"/><circle class="bar" cx="46" cy="46" r="42.5" stroke-width="7" stroke-dasharray="267.04" stroke-dashoffset="37.38"/></svg>
+              <div class="ring-label"><b>86%</b><small>A’lo</small></div>
+            </div>
+          </section>
+
+          <section class="grid g-4 mt-20" aria-label="Kunlik ko‘rsatkichlar">
+            <article class="card stat-card">
+              <div class="stat-top"><span class="ic ic-blue"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.2 6 10.5a6 6 0 0 1-12 0C6 9.2 12 3 12 3z"/></svg></span><span class="stat-name">Suv iste’moli</span><span class="stat-pct">60%</span></div>
+              <div class="stat-val">1.5 / 2.5 <small>litr</small></div>
+              <div class="progress" style="--p:60%"><span></span></div>
+              <div class="stat-note">Yana 4 stakan iching</div>
+            </article>
+            <article class="card stat-card">
+              <div class="stat-top"><span class="ic ic-purple"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></span><span class="stat-name">Uyqu davomiyligi</span><span class="stat-pct purple">88%</span></div>
+              <div class="stat-val">7 soat 30 <small>daqiqa</small></div>
+              <div class="progress purple" style="--p:88%"><span></span></div>
+              <div class="stat-note">Uyqu sifati: juda yaxshi</div>
+            </article>
+            <article class="card stat-card">
+              <div class="stat-top"><span class="ic ic-green"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="14" cy="4.5" r="1.8"/><path d="M8 21l3-6-2.5-2.5L10 8l4 2 3 3M11 15l3 2 1 4M10 8 7 11"/></svg></span><span class="stat-name">Kunlik qadamlar</span><span class="stat-pct green">63%</span></div>
+              <div class="stat-val">6 250 <small>qadam</small></div>
+              <div class="progress green" style="--p:63%"><span></span></div>
+              <div class="stat-note">Maqsad: 10 000 qadam</div>
+            </article>
+            <article class="card stat-card">
+              <div class="stat-top"><span class="ic ic-orange"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1 3.5 5 5.5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4 .3 1.5 1 2 2 2 0-3-1-5 1-8z"/></svg></span><span class="stat-name">Sarflangan quvvat</span><span class="stat-pct orange">74%</span></div>
+              <div class="stat-val">1 840 <small>kkal</small></div>
+              <div class="progress orange" style="--p:74%"><span></span></div>
+              <div class="stat-note">Maqsadning 74 foizi</div>
+            </article>
+          </section>
+
+          <section class="grid g-main mt-20">
+            <article class="card">
+              <div class="card-head">
+                <div><h2 class="card-title">Haftalik faollik</h2><p class="card-sub">Oxirgi 7 kun</p></div>
+                <span class="pill">Hafta</span>
+              </div>
+              <div class="chart-box">
+                <div data-line="30,45,38,70,52,34,48,62,84,60,66,78" data-h="190"></div>
+                <div class="chart-days"><span>Du</span><span>Se</span><span>Cho</span><span>Pa</span><span>Ju</span><span>Sha</span><span>Ya</span></div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div><h2 class="card-title">Uyqu sifati</h2><p class="card-sub">Haftalik o‘rtacha</p></div>
+              <div class="water-body" style="margin-top:28px; justify-content:center">
+                <div class="ring-wrap" data-ring="87" data-size="130" data-stroke="12" data-color="#8b5cf6" style="width:130px;height:130px"><svg width="130" height="130" viewBox="0 0 130 130" aria-hidden="true"><circle class="track" cx="65" cy="65" r="59" stroke-width="12"/><circle class="bar" cx="65" cy="65" r="59" stroke-width="12" stroke-dasharray="370.71" stroke-dashoffset="48.19" style="stroke:#8b5cf6"/></svg>
+                  <div class="ring-label"><b>87%</b><small>Juda yaxshi</small></div>
+                </div>
+                <div>
+                  <div class="habit-line" style="gap:18px;border:0;padding:6px 0"><span><i style="color:#8b5cf6">●</i> Chuqur uyqu</span><b>2s 10d</b></div>
+                  <div class="habit-line" style="gap:18px;border:0;padding:6px 0"><span><i style="color:#a78bfa">●</i> Yengil uyqu</span><b>4s 05d</b></div>
+                  <div class="habit-line" style="gap:18px;border:0;padding:6px 0"><span><i style="color:#ddd6fe">●</i> Tez uyqu</span><b>1s 15d</b></div>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <section class="grid g-main mt-20">
+            <article class="card">
+              <div class="card-head">
+                <div><h2 class="card-title">Bugungi maqsadlar</h2><p class="card-sub" data-check-count>2 / 4 bajarildi</p></div>
+              </div>
+              <ul class="checks">
+<li class="check done"><span class="check-box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span class="check-text">8 stakan suv ichish<small>Bajarildi</small></span></li>
+<li class="check done"><span class="check-box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span class="check-text">30 daqiqa piyoda yurish<small>Bajarildi</small></span></li>
+<li class="check"><span class="check-box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span class="check-text">Meva va sabzavot iste’moli<small>Kutilmoqda</small></span></li>
+<li class="check"><span class="check-box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span class="check-text">23:00 gacha uxlash<small>Kutilmoqda</small></span></li>
+              </ul>
+            </article>
+
+            <article class="card ai-card">
+              <div class="ai-card-head">
+                <span class="ai-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/><path d="M19 3v4M17 5h4"/></svg></span>
+                <div><h2 class="card-title" style="font-size:14px">AI kunlik tavsiyasi</h2><p class="card-sub">Siz uchun maxsus</p></div>
+              </div>
+              <p>Bugun faolligingiz yaxshi! Kechki payt yana <b>15 daqiqa</b> sayr qilsangiz, kunlik qadam maqsadingizga yaqinlashasiz.</p>
+              <a class="link-more" href="ai.html">Ko‘proq tavsiya olish <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </article>
+          </section>
+
+        </main>
+      </div>
+    </div>
+
+    <script src="../js/main.js" defer></script>
+    <script src="../js/app.js" defer></script>
+  </body>
+</html>

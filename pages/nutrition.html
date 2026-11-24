@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ovqatlanish — HealthMate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    />
+    <link rel="stylesheet" href="../css/app.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar-app" id="sidebar" aria-label="Asosiy menyu">
+        <a class="s-logo" href="../index.html" aria-label="HealthMate — bosh sahifa">
+          <span class="s-logo-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19.5 12.6 12 20l-7.5-7.4a4.9 4.9 0 0 1 0-7 5 5 0 0 1 7 0l.5.5.5-.5a5 5 0 0 1 7 0 4.9 4.9 0 0 1 0 7Z"/></svg></span>
+          <span class="s-logo-text">Health<span class="accent">Mate</span></span>
+        </a>
+
+        <nav class="s-nav">
+          <a class="s-link" href="dashboard.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg> Shaxsiy kabinet</a>
+          <a class="s-link" href="ai.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/><path d="M19 3v4M17 5h4"/></svg> AI yordamchi</a>
+          <a class="s-link" href="tracker.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg> Kunlik odatlar</a>
+          <a class="s-link is-active" href="nutrition.html" aria-current="page"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3v8M4 3v5a3 3 0 0 0 6 0V3M7 11v10"/><path d="M17 21V3c-2.5 1.5-4 4.5-4 8h4"/></svg> Ovqatlanish</a>
+          <a class="s-link" href="reports.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M8 17v-5M13 17V8M18 17v-9"/></svg> Hisobotlar</a>
+        </nav>
+
+        <div class="s-bottom">
+          <div class="weekly">
+            <span class="accent"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/><path d="M19 3v4M17 5h4"/></svg></span>
+            <div class="weekly-title">Haftalik natija</div>
+            <div class="weekly-sub">Maqsadlaringizning 82% bajarildi!</div>
+            <div class="progress" style="--p: 82%"><span></span></div>
+          </div>
+          <a class="user-box" href="dashboard.html">
+            <span class="user-avatar" data-user-initials>MK</span>
+            <div>
+              <div class="user-name" data-user-full>Madina Karimova</div>
+              <div class="user-sub">Shaxsiy reja</div>
+            </div>
+            <span class="go"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></span>
+          </a>
+        </div>
+      </aside>
+
+      <div class="overlay"></div>
+
+      <div class="content">
+        <header class="topbar">
+          <button class="menu-btn" type="button" aria-label="Menyuni ochish" aria-controls="sidebar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+          <button class="icon-btn" type="button" aria-label="Bildirishnomalar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg><span class="dot"></span></button>
+          <span class="top-avatar" aria-hidden="true" data-user-initials>MK</span>
+        </header>
+
+        <main class="page">
+
+          <div class="page-head">
+            <div>
+              <h1 class="page-title">Ovqatlanish</h1>
+              <p class="page-sub">Muvozanatli taomlaning va kunlik quvvat miqdorini nazorat qiling.</p>
+            </div>
+            <a class="btn" href="ai.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/><path d="M19 3v4M17 5h4"/></svg> AI orqali menyu tuzish</a>
+          </div>
+
+          <section class="card kcal-card">
+            <div class="kcal-main">
+              <div class="ring-wrap" data-ring="77" data-size="130" data-stroke="13" data-color="#2563eb" style="width:130px;height:130px"><svg width="130" height="130" viewBox="0 0 130 130" aria-hidden="true"><circle class="track" cx="65" cy="65" r="58.5" stroke-width="13"/><circle class="bar" cx="65" cy="65" r="58.5" stroke-width="13" stroke-dasharray="367.57" stroke-dashoffset="84.54" style="stroke:#2563eb"/></svg>
+                <div class="ring-label"><b>1690</b><small>2 200 kkal</small></div>
+              </div>
+              <div class="kcal-text">
+                <div class="tiny">Bugun iste’mol qilindi</div>
+                <div class="num">1690<small>kkal</small></div>
+                <div class="left">Kunlik maqsadgacha <b>510 kkal</b> qoldi</div>
+              </div>
+            </div>
+            <div class="macros">
+              <div class="macro">
+                <div class="ring-wrap" data-ring="77" data-size="64" data-stroke="6" data-color="#2563eb" style="width:64px;height:64px"><svg width="64" height="64" viewBox="0 0 64 64" aria-hidden="true"><circle class="track" cx="32" cy="32" r="29" stroke-width="6"/><circle class="bar" cx="32" cy="32" r="29" stroke-width="6" stroke-dasharray="182.21" stroke-dashoffset="41.91" style="stroke:#2563eb"/></svg><div class="ring-label"><b>77%</b></div></div>
+                <div><div class="m-name">Oqsil</div><div class="m-sub">92 / 120 g</div></div>
+              </div>
+              <div class="macro">
+                <div class="ring-wrap" data-ring="69" data-size="64" data-stroke="6" data-color="#f97316" style="width:64px;height:64px"><svg width="64" height="64" viewBox="0 0 64 64" aria-hidden="true"><circle class="track" cx="32" cy="32" r="29" stroke-width="6"/><circle class="bar" cx="32" cy="32" r="29" stroke-width="6" stroke-dasharray="182.21" stroke-dashoffset="56.49" style="stroke:#f97316"/></svg><div class="ring-label"><b>69%</b></div></div>
+                <div><div class="m-name">Yog‘</div><div class="m-sub">48 / 70 g</div></div>
+              </div>
+              <div class="macro">
+                <div class="ring-wrap" data-ring="74" data-size="64" data-stroke="6" data-color="#14b8a6" style="width:64px;height:64px"><svg width="64" height="64" viewBox="0 0 64 64" aria-hidden="true"><circle class="track" cx="32" cy="32" r="29" stroke-width="6"/><circle class="bar" cx="32" cy="32" r="29" stroke-width="6" stroke-dasharray="182.21" stroke-dashoffset="47.38" style="stroke:#14b8a6"/></svg><div class="ring-label"><b>74%</b></div></div>
+                <div><div class="m-name">Uglevod</div><div class="m-sub">185 / 250 g</div></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="meals-wrap">
+            <div>
+              <div class="section-row">
+                <h2>Bugungi ovqatlanish rejasi</h2>
+                <button class="text-btn" type="button"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Taom qo‘shish</button>
+              </div>
+              <div class="meals">
+                <article class="meal">
+                  <div class="meal-img ">
+                    <!-- Rasm qo‘shish: <img src="../images/nonushta.jpg" alt="Avokadoli tuxum va non" loading="lazy" /> -->
+                    <span style="color:rgba(255,255,255,.95)"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3v8M4 3v5a3 3 0 0 0 6 0V3M7 11v10"/><path d="M17 21V3c-2.5 1.5-4 4.5-4 8h4"/></svg></span>
+                  </div>
+                  <div class="meal-info">
+                    <div class="meal-type">Nonushta</div>
+                    <div class="meal-name">Avokadoli tuxum va non</div>
+                    <div class="meal-meta">420 kkal · 18 g oqsil</div>
+                  </div>
+                  <button class="add-btn" type="button" aria-label="Qo‘shish"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+                </article>
+                <article class="meal">
+                  <div class="meal-img g2">
+                    <!-- Rasm qo‘shish: <img src="../images/tushlik.jpg" alt="Tovuqli sabzavot salati" loading="lazy" /> -->
+                    <span style="color:rgba(255,255,255,.95)"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3v8M4 3v5a3 3 0 0 0 6 0V3M7 11v10"/><path d="M17 21V3c-2.5 1.5-4 4.5-4 8h4"/></svg></span>
+                  </div>
+                  <div class="meal-info">
+                    <div class="meal-type">Tushlik</div>
+                    <div class="meal-name">Tovuqli sabzavot salati</div>
+                    <div class="meal-meta">580 kkal · 32 g oqsil</div>
+                  </div>
+                  <button class="add-btn" type="button" aria-label="Qo‘shish"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+                </article>
+                <article class="meal">
+                  <div class="meal-img g3">
+                    <!-- Rasm qo‘shish: <img src="../images/kechki-ovqat.jpg" alt="Losos va bug‘da pishgan sabzavot" loading="lazy" /> -->
+                    <span style="color:rgba(255,255,255,.95)"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3v8M4 3v5a3 3 0 0 0 6 0V3M7 11v10"/><path d="M17 21V3c-2.5 1.5-4 4.5-4 8h4"/></svg></span>
+                  </div>
+                  <div class="meal-info">
+                    <div class="meal-type">Kechki ovqat</div>
+                    <div class="meal-name">Losos va bug‘da pishgan sabzavot</div>
+                    <div class="meal-meta">510 kkal · 18 g oqsil</div>
+                  </div>
+                  <button class="add-btn" type="button" aria-label="Qo‘shish"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+                </article>
+                <article class="meal">
+                  <div class="meal-img g4">
+                    <!-- Rasm qo‘shish: <img src="../images/yengil-tamaddi.jpg" alt="Yunon yogurti va rezavorlar" loading="lazy" /> -->
+                    <span style="color:rgba(255,255,255,.95)"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3v8M4 3v5a3 3 0 0 0 6 0V3M7 11v10"/><path d="M17 21V3c-2.5 1.5-4 4.5-4 8h4"/></svg></span>
+                  </div>
+                  <div class="meal-info">
+                    <div class="meal-type">Yengil tamaddi</div>
+                    <div class="meal-name">Yunon yogurti va rezavorlar</div>
+                    <div class="meal-meta">180 kkal · 32 g oqsil</div>
+                  </div>
+                  <button class="add-btn" type="button" aria-label="Qo‘shish"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+                </article>
+              </div>
+            </div>
+
+            <div class="side-stack">
+              <article class="card ai-card">
+                <span class="ai-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/><path d="M19 3v4M17 5h4"/></svg></span>
+                <h2 class="card-title" style="margin-top:16px">AI tavsiyasi</h2>
+                <p style="margin-top:10px">Bugun oqsil miqdori biroz kam. Kechki ovqatga dukkakli mahsulot yoki 100 g tovuq qo‘shing.</p>
+                <a class="link-more" href="ai.html">To‘liq tahlil <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </article>
+
+              <article class="card">
+                <h2 class="card-title">Bugungi foydali moddalar</h2>
+                <p class="card-sub">Maqsadga nisbatan</p>
+              <div class="nutri-row">
+                <div class="top"><span>Kletchatka</span><b>22 / 30 g</b></div>
+                <div class="progress " style="--p:73%"><span></span></div>
+              </div>
+              <div class="nutri-row">
+                <div class="top"><span>Shakar</span><b>18 / 40 g</b></div>
+                <div class="progress orange" style="--p:45%"><span></span></div>
+              </div>
+              <div class="nutri-row">
+                <div class="top"><span>Tuz</span><b>3.2 / 5 g</b></div>
+                <div class="progress purple" style="--p:64%"><span></span></div>
+              </div>
+              </article>
+            </div>
+          </section>
+
+        </main>
+      </div>
+    </div>
+
+    <script src="../js/main.js" defer></script>
+    <script src="../js/app.js" defer></script>
+  </body>
+</html>

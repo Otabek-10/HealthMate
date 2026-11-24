@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI yordamchi — HealthMate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    />
+    <link rel="stylesheet" href="../css/app.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar-app" id="sidebar" aria-label="Asosiy menyu">
+        <a class="s-logo" href="../index.html" aria-label="HealthMate — bosh sahifa">
+          <span class="s-logo-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19.5 12.6 12 20l-7.5-7.4a4.9 4.9 0 0 1 0-7 5 5 0 0 1 7 0l.5.5.5-.5a5 5 0 0 1 7 0 4.9 4.9 0 0 1 0 7Z"/></svg></span>
+          <span class="s-logo-text">Health<span class="accent">Mate</span></span>
+        </a>
+
+        <nav class="s-nav">
+          <a class="s-link" href="dashboard.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg> Shaxsiy kabinet</a>
+          <a class="s-link is-active" href="ai.html" aria-current="page"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/><path d="M19 3v4M17 5h4"/></svg> AI yordamchi</a>
+          <a class="s-link" href="tracker.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg> Kunlik odatlar</a>
+          <a class="s-link" href="nutrition.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3v8M4 3v5a3 3 0 0 0 6 0V3M7 11v10"/><path d="M17 21V3c-2.5 1.5-4 4.5-4 8h4"/></svg> Ovqatlanish</a>
+          <a class="s-link" href="reports.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M8 17v-5M13 17V8M18 17v-9"/></svg> Hisobotlar</a>
+        </nav>
+
+        <div class="s-bottom">
+          <div class="weekly">
+            <span class="accent"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/><path d="M19 3v4M17 5h4"/></svg></span>
+            <div class="weekly-title">Haftalik natija</div>
+            <div class="weekly-sub">Maqsadlaringizning 82% bajarildi!</div>
+            <div class="progress" style="--p: 82%"><span></span></div>
+          </div>
+          <a class="user-box" href="dashboard.html">
+            <span class="user-avatar" data-user-initials>MK</span>
+            <div>
+              <div class="user-name" data-user-full>Madina Karimova</div>
+              <div class="user-sub">Shaxsiy reja</div>
+            </div>
+            <span class="go"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></span>
+          </a>
+        </div>
+      </aside>
+
+      <div class="overlay"></div>
+
+      <div class="content">
+        <header class="topbar">
+          <button class="menu-btn" type="button" aria-label="Menyuni ochish" aria-controls="sidebar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+          <button class="icon-btn" type="button" aria-label="Bildirishnomalar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg><span class="dot"></span></button>
+          <span class="top-avatar" aria-hidden="true" data-user-initials>MK</span>
+        </header>
+
+        <main class="page">
+
+          <div class="page-head">
+            <div>
+              <h1 class="page-title">AI Sog‘liq yordamchisi</h1>
+              <p class="page-sub">Sog‘lom odatlar bo‘yicha shaxsiy tavsiyalar oling</p>
+            </div>
+          </div>
+
+          <section class="chat-shell" data-chat aria-label="AI suhbat">
+            <aside class="chat-side">
+              <button class="btn" type="button" data-new-chat><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Yangi suhbat</button>
+              <div class="chat-hist-title">SO‘NGGI SUHBATLAR</div>
+              <button class="hist is-active" type="button"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg> Uyqu sifatini yaxshilash</button>
+              <button class="hist" type="button"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3v8M4 3v5a3 3 0 0 0 6 0V3M7 11v10"/><path d="M17 21V3c-2.5 1.5-4 4.5-4 8h4"/></svg> Bugungi ovqatlanish rejasi</button>
+              <button class="hist" type="button"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="14" cy="4.5" r="1.8"/><path d="M8 21l3-6-2.5-2.5L10 8l4 2 3 3M11 15l3 2 1 4M10 8 7 11"/></svg> Uyda mashq qilish</button>
+              <button class="hist" type="button"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.2 6 10.5a6 6 0 0 1-12 0C6 9.2 12 3 12 3z"/></svg> Suv ichish tartibi</button>
+            </aside>
+
+            <div class="chat-main">
+              <div class="chat-top">
+                <span class="ai-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/><path d="M19 3v4M17 5h4"/></svg></span>
+                <div><div class="name">HealthMate AI</div><div class="state">Hozir faol</div></div>
+              </div>
+
+              <div class="chat-body" aria-live="polite">
+                <div class="chat-day">Bugun</div>
+
+                <div class="msg bot">
+                  <span class="ai-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/><path d="M19 3v4M17 5h4"/></svg></span>
+                  <div class="bubble">Salom, <span data-user-name>Madina</span>! Men sizning aqlli sog‘liq yordamchingizman. Bugun sizga qanday yordam bera olaman?<span class="time">09:41</span></div>
+                </div>
+
+                <div class="msg me">
+                  <div class="bubble">Uyqu sifatini qanday yaxshilash mumkin?<span class="time">09:41</span></div>
+                </div>
+
+                <div class="msg bot">
+                  <span class="ai-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/><path d="M19 3v4M17 5h4"/></svg></span>
+                  <div class="bubble">Uyqu ma’lumotlaringizga ko‘ra, o‘rtacha 7 soat 12 daqiqa uxlaysiz. Sifatni yaxshilash uchun har kuni bir vaqtda uxlashga yoting, uyqudan 1 soat oldin ekranlardan uzoqlashing va xonani salqin tuting.<span class="time">09:42</span></div>
+                </div>
+
+                <div class="msg bot">
+                  <span class="ai-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/><path d="M19 3v4M17 5h4"/></svg></span>
+                  <div class="bubble tip-box">
+                    <h4>Bugungi shaxsiy tavsiya</h4>
+                    <div class="tip-item"><span class="n">1</span><div><b>Harakat</b><span>Tushlikdan keyin 15 daqiqa piyoda yuring.</span></div></div>
+                    <div class="tip-item"><span class="n">2</span><div><b>Suv</b><span>Keyingi 2 soatda 2 stakan suv iching.</span></div></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="chat-foot">
+                <div class="suggest">
+                  <button type="button">Bugun qanday ovqatlanishim kerak?</button>
+                  <button type="button">Uyqu sifatini qanday yaxshilash mumkin?</button>
+                  <button type="button">Kuniga qancha suv ichishim kerak?</button>
+                  <button type="button">Menga mashqlar rejasini tuzib bering</button>
+                </div>
+                <form class="chat-form" autocomplete="off">
+                  <input type="text" placeholder="Savolingizni yozing..." aria-label="Savolingiz" />
+                  <button type="submit" aria-label="Yuborish"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg></button>
+                </form>
+              </div>
+            </div>
+          </section>
+
+        </main>
+      </div>
+    </div>
+
+    <script src="../js/main.js" defer></script>
+    <script src="../js/app.js" defer></script>
+  </body>
+</html>

@@ -13,12 +13,12 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <div class="hero-wrap">
+    <div class="hero-wrap" id="home">
       <div class="hero-glow"></div>
 
       <!-- NAVBAR -->
       <header class="header">
-        <a href="#" class="logo" aria-label="HealthMate">
+        <a href="#home" class="logo" aria-label="HealthMate">
           <span class="logo-icon">
             <svg
               width="22"
@@ -40,15 +40,15 @@
         </a>
 
         <nav class="navmid" aria-label="Asosiy menyu">
-          <a class="navlink" href="#">Bosh sahifa</a>
-          <a class="navlink" href="#">Imkoniyatlar</a>
-          <a class="navlink" href="#">AI yordamchi</a>
-          <a class="navlink" href="#">Biz haqimizda</a>
+          <a class="navlink" href="#home">Bosh sahifa</a>
+          <a class="navlink" href="#features">Imkoniyatlar</a>
+          <a class="navlink" href="#ai">AI yordamchi</a>
+          <a class="navlink" href="#about">Biz haqimizda</a>
         </nav>
 
         <div class="header-actions">
-          <a href="#" class="login-link">Kirish</a>
-          <a class="btn-primary btn-signup" href="#">Ro‘yxatdan o‘tish</a>
+          <a href="./pages/dashboard.html" class="login-link">Kirish</a>
+          <a class="btn-primary btn-signup" href="./pages/dashboard.html">Ro‘yxatdan o‘tish</a>
         </div>
       </header>
 
@@ -90,7 +90,7 @@
           </p>
 
           <div class="cta">
-            <a class="btn-primary btn-start" href="#">
+            <a class="btn-primary btn-start" href="./pages/dashboard.html">
               Bepul boshlash
               <svg
                 width="20"
@@ -106,7 +106,9 @@
                 <path d="M5 12h14M13 6l6 6-6 6" />
               </svg>
             </a>
-            <a class="btn-soft btn-features" href="#">Imkoniyatlarni ko‘rish</a>
+            <a class="btn-soft btn-features" href="#features"
+              >Imkoniyatlarni ko‘rish</a
+            >
           </div>
 
           <div class="social">
@@ -352,26 +354,37 @@
     <section class="numbers" aria-label="Statistika">
       <div class="numbers-inner">
         <div class="num-item">
-          <div class="num-value">10 ming+</div>
+          <div class="num-value" data-count="10" data-suffix=" ming+">
+            10 ming+
+          </div>
           <div class="num-label">Faol foydalanuvchi</div>
         </div>
         <div class="num-item">
-          <div class="num-value">1 mln+</div>
+          <div class="num-value" data-count="1" data-suffix=" mln+">
+            1 mln+
+          </div>
           <div class="num-label">Kuzatilgan odatlar</div>
         </div>
         <div class="num-item">
-          <div class="num-value">92%</div>
+          <div class="num-value" data-count="92" data-suffix="%">92%</div>
           <div class="num-label">Maqsadga erishish</div>
         </div>
         <div class="num-item">
-          <div class="num-value">4.9/5</div>
+          <div
+            class="num-value"
+            data-count="4.9"
+            data-decimals="1"
+            data-suffix="/5"
+          >
+            4.9/5
+          </div>
           <div class="num-label">Foydalanuvchi bahosi</div>
         </div>
       </div>
     </section>
 
-    <!-- IMKONIYATLAR SARLAVHASI -->
-    <section class="features">
+    <!-- IMKONIYATLAR -->
+    <section class="features" id="features">
       <div class="section-head">
         <div class="badge">Kundalik yordamchingiz</div>
         <h2 class="section-title">
@@ -382,6 +395,426 @@
           va rivojlantiring.
         </p>
       </div>
+
+      <div class="features-grid">
+        <article class="fcard reveal" style="--d: 0ms">
+          <span class="fcard-icon fcard-icon-blue">
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#2563eb"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M12 3s6 6.2 6 10.5a6 6 0 0 1-12 0C6 9.2 12 3 12 3z" />
+            </svg>
+          </span>
+          <h3 class="fcard-title">Suv nazorati</h3>
+          <p class="fcard-text">
+            Kunlik suv miqdorini kuzating va o‘z vaqtida eslatmalar oling.
+          </p>
+          <a class="fcard-link" href="./pages/tracker.html">
+            Batafsil
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </a>
+        </article>
+
+        <article class="fcard reveal" style="--d: 90ms">
+          <span class="fcard-icon fcard-icon-purple">
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#8b5cf6"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" />
+            </svg>
+          </span>
+          <h3 class="fcard-title">Uyqu tahlili</h3>
+          <p class="fcard-text">
+            Uyqu sifati va davomiyligini tahlil qilib, foydali odatlar yarating.
+          </p>
+          <a class="fcard-link" href="./pages/reports.html">
+            Batafsil
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </a>
+        </article>
+
+        <article class="fcard reveal" style="--d: 180ms">
+          <span class="fcard-icon fcard-icon-orange">
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#f97316"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M7 3v8M4 3v5a3 3 0 0 0 6 0V3M7 11v10" />
+              <path d="M17 21V3c-2.5 1.5-4 4.5-4 8h4" />
+            </svg>
+          </span>
+          <h3 class="fcard-title">Ovqatlanish</h3>
+          <p class="fcard-text">
+            Kaloriya va foydali moddalarni hisoblang, sog‘lom menyu tuzing.
+          </p>
+          <a class="fcard-link" href="./pages/nutrition.html">
+            Batafsil
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </a>
+        </article>
+
+        <article class="fcard reveal" style="--d: 270ms">
+          <span class="fcard-icon fcard-icon-green">
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#10b981"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="14" cy="4.5" r="1.8" />
+              <path
+                d="M8 21l3-6-2.5-2.5L10 8l4 2 3 3M11 15l3 2 1 4M10 8 7 11"
+              />
+            </svg>
+          </span>
+          <h3 class="fcard-title">Jismoniy faollik</h3>
+          <p class="fcard-text">
+            Qadamlar, mashqlar va sarflangan quvvatni bitta joyda kuzating.
+          </p>
+          <a class="fcard-link" href="./pages/tracker.html">
+            Batafsil
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </a>
+        </article>
+      </div>
     </section>
+
+    <!-- AI MASLAHATCHI -->
+    <section class="ai-section" id="ai" aria-labelledby="ai-title">
+      <div class="ai-banner reveal">
+        <div class="ai-visual" aria-hidden="true">
+          <span class="ai-ring ai-ring-1"></span>
+          <span class="ai-ring ai-ring-2"></span>
+          <div class="ai-core">
+            <svg
+              width="64"
+              height="64"
+              viewBox="0 0 64 64"
+              fill="none"
+              stroke="#ffffff"
+              stroke-width="3"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M38 8l4.2 12.3L54 24.5l-11.8 4.2L38 41l-4.2-12.3L22 24.5l11.8-4.2L38 8z"
+              />
+              <path
+                d="M20 38l2.2 6.3L28 46.5l-5.8 2.2L20 55l-2.2-6.3L12 46.5l5.8-2.2L20 38z"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <div class="ai-content">
+          <span class="ai-badge">Siz uchun yaratilgan AI</span>
+          <h2 class="ai-title" id="ai-title">
+            Shaxsiy sog‘lom hayot
+            <span class="ai-accent">maslahatchisi</span>
+          </h2>
+          <p class="ai-text">
+            AI yordamchi kundalik ko‘rsatkichlaringizni o‘rganib, ovqatlanish,
+            uyqu, suv va faollik bo‘yicha sodda hamda shaxsiy tavsiyalar
+            beradi.
+          </p>
+
+          <ul class="ai-points">
+            <li>
+              <span class="ai-check">
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#ffffff"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M5 12.5l4.5 4.5L19 7.5" />
+                </svg>
+              </span>
+              24/7 tezkor yordam
+            </li>
+            <li>
+              <span class="ai-check">
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#ffffff"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M5 12.5l4.5 4.5L19 7.5" />
+                </svg>
+              </span>
+              Shaxsiy tavsiyalar
+            </li>
+            <li>
+              <span class="ai-check">
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#ffffff"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M5 12.5l4.5 4.5L19 7.5" />
+                </svg>
+              </span>
+              Kundalik tahlil
+            </li>
+          </ul>
+
+          <a class="btn-ai" href="./pages/ai.html">
+            AI bilan suhbatlashish
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOYDALANUVCHILAR FIKRI -->
+    <section class="reviews" id="reviews">
+      <div class="section-head">
+        <div class="badge">Foydalanuvchilar fikri</div>
+        <h2 class="section-title">
+          HealthMate hayotni <span class="accent">yaxshilaydi</span>
+        </h2>
+      </div>
+
+      <div class="reviews-grid">
+        <article class="tcard reveal" style="--d: 0ms">
+          <div class="stars" role="img" aria-label="5 yulduz">
+            <span aria-hidden="true">★★★★★</span>
+          </div>
+          <p class="tcard-quote">“HealthMate tufayli suv ichish va uyqu tartibimni yo‘lga qo‘ydim. Natijalar juda qulay ko‘rinadi.”</p>
+          <div class="tcard-author">
+            <span class="tcard-avatar" aria-hidden="true">M</span>
+            <div>
+              <div class="tcard-name">Madina Karimova</div>
+              <div class="tcard-role">Talaba</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="tcard reveal" style="--d: 90ms">
+          <div class="stars" role="img" aria-label="5 yulduz">
+            <span aria-hidden="true">★★★★★</span>
+          </div>
+          <p class="tcard-quote">“AI tavsiyalari menga har kuni kichik, ammo foydali o‘zgarishlar qilishga yordam bermoqda.”</p>
+          <div class="tcard-author">
+            <span class="tcard-avatar" aria-hidden="true">A</span>
+            <div>
+              <div class="tcard-name">Azizbek Saidov</div>
+              <div class="tcard-role">Dasturchi</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="tcard reveal" style="--d: 180ms">
+          <div class="stars" role="img" aria-label="5 yulduz">
+            <span aria-hidden="true">★★★★★</span>
+          </div>
+          <p class="tcard-quote">“Ovqatlanish rejam endi ancha muvozanatli. Ilova chiroyli va ishlatish juda oson.”</p>
+          <div class="tcard-author">
+            <span class="tcard-avatar" aria-hidden="true">N</span>
+            <div>
+              <div class="tcard-name">Nodira Hamroyeva</div>
+              <div class="tcard-role">Dizayner</div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="about">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="#home" class="logo" aria-label="HealthMate">
+            <span class="logo-icon">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#ffffff"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path
+                  d="M19.5 12.6 12 20l-7.5-7.4a4.9 4.9 0 0 1 0-7 5 5 0 0 1 7 0l.5.5.5-.5a5 5 0 0 1 7 0 4.9 4.9 0 0 1 0 7Z"
+                />
+              </svg>
+            </span>
+            <span class="logo-text">Health<span class="accent">Mate</span></span>
+          </a>
+          <p class="footer-tagline">
+            Sog‘lom hayot uchun aqlli va ishonchli hamrohingiz.
+          </p>
+        </div>
+
+        <nav class="footer-col" aria-label="Mahsulot">
+          <h3>Mahsulot</h3>
+          <ul>
+            <li><a href="./pages/dashboard.html">Shaxsiy kabinet</a></li>
+            <li><a href="./pages/tracker.html">Kunlik odatlar</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-col" aria-label="Yordam">
+          <h3>Yordam</h3>
+          <ul>
+            <li><a href="#">Yordam markazi</a></li>
+            <li><a href="#">Maxfiylik</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026 HealthMate. Barcha huquqlar himoyalangan.
+      </div>
+    </footer>
+
+    <button class="to-top" type="button" aria-label="Tepaga qaytish">
+      <svg
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M12 19V5M5 12l7-7 7 7" />
+      </svg>
+    </button>
+
+    <!-- FOYDALANUVCHI MODALI (3 soniyadan keyin chiqadi) -->
+    <div class="modal" id="user-modal" hidden>
+      <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <h2 class="modal-title" id="modal-title">Tanishib olaylik!</h2>
+        <p class="modal-text">
+          Ma’lumotlaringizni kiriting, HealthMate sizga shaxsiy murojaat qiladi.
+        </p>
+        <form class="modal-form" novalidate>
+          <label>Ism
+            <input type="text" name="ism" placeholder="Masalan: Madina" autocomplete="given-name" required />
+          </label>
+          <label>Familya
+            <input type="text" name="familya" placeholder="Masalan: Karimova" autocomplete="family-name" required />
+          </label>
+          <label>Yosh
+            <input type="number" name="yosh" placeholder="Masalan: 22" min="1" max="120" required />
+          </label>
+          <p class="modal-error" role="alert"></p>
+          <button class="btn-primary modal-btn" type="submit">Saqlash</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="./js/profile.js" defer></script>
+    <script src="./js/main.js" defer></script>
   </body>
 </html>
