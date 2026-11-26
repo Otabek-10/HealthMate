@@ -1,0 +1,587 @@
+/* =====================================================
+   HealthMate — yuqori panel (qo'ng'iroqcha, profil, salomlashuv)
+   js/topbar.js tomonidan avtomatik ulanadi.
+   ===================================================== */
+
+/* ---------- Salomlashuv ---------- */
+.tb-greet {
+  margin-right: auto;
+  min-width: 0;
+}
+
+.tb-greet-hi {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--navy);
+  white-space: nowrap;
+}
+
+.tb-greet-name {
+  color: var(--blue);
+}
+
+.tb-greet-sub {
+  margin-top: 3px;
+  font-size: 12px;
+  color: var(--muted-2);
+  white-space: nowrap;
+}
+
+/* ---------- Ketma-ket kunlar ---------- */
+.tb-streak {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 42px;
+  padding: 0 14px;
+  border-radius: 12px;
+  background: #fff4ea;
+  border: 1px solid #ffe0c7;
+  color: var(--orange);
+  font-size: 13px;
+  cursor: default;
+}
+
+.tb-streak b {
+  font-weight: 800;
+  color: #c2570c;
+}
+
+.tb-streak span {
+  color: #c2570c;
+  font-weight: 600;
+}
+
+/* ---------- Tugmalar ---------- */
+.tb-wrap {
+  position: relative;
+}
+
+.tb-btn,
+.tb-avatar {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.tb-btn {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--navy);
+}
+
+.tb-btn:hover,
+.tb-btn[aria-expanded="true"] {
+  background: #f1f6ff;
+  color: var(--blue);
+}
+
+.tb-avatar {
+  border: 0;
+  background: var(--blue);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.28);
+}
+
+.tb-avatar:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(37, 99, 235, 0.36);
+}
+
+.tb-online {
+  position: absolute;
+  right: -3px;
+  bottom: -3px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #22c55e;
+  border: 2px solid #fff;
+}
+
+.tb-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  border-radius: 99px;
+  background: #ef4444;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 10.5px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tb-badge[hidden] {
+  display: none;
+}
+
+.tb-badge.is-pop {
+  animation: tb-pop 0.6s ease;
+}
+
+@keyframes tb-pop {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.45);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.tb-btn.is-ringing svg {
+  transform-origin: 50% 8%;
+  animation: tb-ring 1.1s ease 2;
+}
+
+@keyframes tb-ring {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  15% {
+    transform: rotate(16deg);
+  }
+  30% {
+    transform: rotate(-14deg);
+  }
+  45% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(-8deg);
+  }
+  75% {
+    transform: rotate(4deg);
+  }
+}
+
+/* ---------- Ochiladigan panel ---------- */
+.tb-pop {
+  position: absolute;
+  top: calc(100% + 14px);
+  right: 0;
+  z-index: 50;
+  width: 380px;
+  max-width: calc(100vw - 32px);
+  border-radius: 20px;
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: 0 24px 60px rgba(15, 27, 61, 0.18);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px) scale(0.98);
+  transform-origin: top right;
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s ease;
+}
+
+.tb-pop.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.tb-pop-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 20px 14px;
+  border-bottom: 1px solid #eef3fa;
+}
+
+.tb-pop-title {
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.tb-pop-sub {
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--muted-2);
+}
+
+.tb-link {
+  border: 0;
+  background: none;
+  padding: 4px 0;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--blue);
+  text-align: right;
+}
+
+.tb-link:disabled {
+  color: #b7c3dc;
+  cursor: default;
+}
+
+/* ---------- Bildirishnomalar ro'yxati ---------- */
+.tb-nlist {
+  max-height: 380px;
+  overflow-y: auto;
+  padding: 8px;
+}
+
+.tb-nitem {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px;
+  border: 0;
+  border-radius: 14px;
+  background: transparent;
+  text-align: left;
+  color: inherit;
+  transition: background 0.15s ease;
+}
+
+.tb-nitem:hover {
+  background: #f4f8ff;
+}
+
+.tb-nitem.is-unread {
+  background: #f1f7ff;
+}
+
+.tb-nic {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tb-nic-blue {
+  background: #e8f0ff;
+  color: var(--blue);
+}
+.tb-nic-green {
+  background: #e1f7f1;
+  color: var(--green);
+}
+.tb-nic-purple {
+  background: #f0e9ff;
+  color: var(--purple);
+}
+.tb-nic-orange {
+  background: #ffefe3;
+  color: var(--orange);
+}
+
+.tb-nbody {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.tb-ntitle {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.tb-ntext {
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.tb-ntime {
+  margin-top: 6px;
+  font-size: 11px;
+  color: var(--muted-2);
+}
+
+.tb-ndot {
+  width: 9px;
+  height: 9px;
+  flex: 0 0 9px;
+  margin-top: 6px;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.tb-nitem.is-unread .tb-ndot {
+  background: var(--blue);
+}
+
+.tb-empty {
+  padding: 36px 20px;
+  text-align: center;
+  color: var(--muted-2);
+}
+
+.tb-empty p {
+  margin: 10px 0 0;
+  font-size: 13px;
+}
+
+/* ---------- Profil menyusi ---------- */
+.tb-profile {
+  width: 300px;
+}
+
+.tb-pf-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 20px 16px;
+}
+
+.tb-pf-avatar {
+  width: 52px;
+  height: 52px;
+  flex: 0 0 52px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #2f7bf5, #1d5fe0);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 800;
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.3);
+}
+
+.tb-pf-name {
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.tb-pf-sub {
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--muted-2);
+}
+
+.tb-pf-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 0 16px;
+  padding: 12px 6px;
+  border-radius: 14px;
+  background: #f4f8ff;
+  text-align: center;
+}
+
+.tb-pf-stats b {
+  display: block;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--blue);
+}
+
+.tb-pf-stats span {
+  display: block;
+  margin-top: 3px;
+  font-size: 11px;
+  color: var(--muted-2);
+}
+
+.tb-menu {
+  padding: 10px 8px 8px;
+}
+
+.tb-mi {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 44px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #475569;
+  text-align: left;
+}
+
+.tb-mi:hover {
+  background: #f1f6ff;
+  color: var(--blue);
+}
+
+.tb-mi-danger {
+  margin-top: 4px;
+  border-top: 1px solid #eef3fa;
+  border-radius: 0 0 12px 12px;
+  color: #dc2626;
+}
+
+.tb-mi-danger:hover {
+  background: #fff1f1;
+  color: #dc2626;
+}
+
+/* ---------- Tahrirlash oynasi ---------- */
+.tb-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(15, 27, 61, 0.55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.tb-modal[hidden] {
+  display: none;
+}
+
+.tb-modal-box {
+  width: 100%;
+  max-width: 420px;
+  padding: 30px;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 30px 80px rgba(15, 27, 61, 0.3);
+}
+
+.tb-modal-box h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.tb-modal-box p {
+  margin: 8px 0 0;
+  font-size: 13.5px;
+  color: var(--muted);
+}
+
+.tb-modal-box form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.tb-modal-box label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.tb-modal-box input {
+  height: 48px;
+  padding: 0 14px;
+  border-radius: 12px;
+  border: 1px solid #d6e6fb;
+  background: #f8fbff;
+  font-family: inherit;
+  font-size: 14.5px;
+  color: var(--navy);
+}
+
+.tb-form-error {
+  min-height: 16px;
+  margin: 0 !important;
+  font-size: 12.5px !important;
+  color: #dc2626 !important;
+}
+
+.tb-form-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.tb-form-actions button {
+  flex: 1 1 0;
+  height: 48px;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.tb-cancel {
+  border: 1px solid #d6e6fb;
+  background: #eaf2ff;
+  color: var(--blue);
+}
+
+.tb-save {
+  border: 0;
+  background: linear-gradient(135deg, #2f7bf5, #1d5fe0);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.28);
+}
+
+/* ---------- Responsiv ---------- */
+@media (max-width: 960px) {
+  .menu-btn {
+    margin-right: 0;
+  }
+  .tb-streak {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .tb-greet {
+    display: none;
+  }
+
+  .menu-btn {
+    margin-right: auto;
+  }
+
+  /* panelni topbar kengligiga yoyamiz */
+  .tb-wrap {
+    position: static;
+  }
+
+  .tb-pop,
+  .tb-profile {
+    top: calc(100% + 8px);
+    left: 16px;
+    right: 16px;
+    width: auto;
+    max-width: none;
+    transform-origin: top center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tb-btn.is-ringing svg,
+  .tb-badge.is-pop {
+    animation: none;
+  }
+  .tb-pop {
+    transition: none;
+  }
+}

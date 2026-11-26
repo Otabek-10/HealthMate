@@ -258,6 +258,100 @@
     });
   });
 
+
+  /* ---------- Taom qo'shish (Ovqatlanish sahifasi) ---------- */
+  var addMealBtn = $("[data-add-meal]");
+  var mealModal = $("#meal-modal");
+  if (addMealBtn && mealModal) {
+    var mealForm = $("form", mealModal);
+    var mealError = $(".meal-error", mealModal);
+    var mealsBox = $(".meals");
+
+    var KCAL_GOAL = 2200;
+    var PROTEIN_GOAL = 120;
+    var kcal = parseInt($("[data-kcal-num]").textContent, 10) || 0;
+    var protein = parseInt($("[data-protein-sub]").textContent, 10) || 0;
+    var added = 0;
+    var GRADS = ["", "g2", "g3", "g4"];
+
+    var forkIcon =
+      '<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3v8M4 3v5a3 3 0 0 0 6 0V3M7 11v10"/><path d="M17 21V3c-2.5 1.5-4 4.5-4 8h4"/></svg>';
+
+    function updateTotals() {
+      var left = KCAL_GOAL - kcal;
+      $("[data-kcal-num]").textContent = kcal;
+      $("[data-kcal-label]").textContent = kcal;
+      setRing($("[data-kcal-ring]"), (kcal / KCAL_GOAL) * 100);
+      $("[data-kcal-left]").innerHTML =
+        left >= 0
+          ? "Kunlik maqsadgacha <b>" + left + " kkal</b> qoldi"
+          : "Kunlik maqsaddan <b>" + -left + " kkal</b> oshdi";
+
+      var pPct = Math.round((protein / PROTEIN_GOAL) * 100);
+      $("[data-protein-sub]").textContent = protein + " / " + PROTEIN_GOAL + " g";
+      $("[data-protein-pct]").textContent = pPct + "%";
+      setRing($("[data-protein-ring]"), pPct);
+    }
+
+    function openMeal() {
+      mealForm.reset();
+      mealError.textContent = "";
+      mealModal.hidden = false;
+      mealForm.elements.nomi.focus();
+    }
+
+    function closeMeal() {
+      mealModal.hidden = true;
+    }
+
+    addMealBtn.addEventListener("click", openMeal);
+    $("[data-meal-cancel]", mealModal).addEventListener("click", closeMeal);
+    mealModal.addEventListener("click", function (e) {
+      if (e.target === mealModal) closeMeal();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeMeal();
+    });
+
+    mealForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var turi = mealForm.elements.turi.value;
+      var nomi = mealForm.elements.nomi.value.trim();
+      var k = parseInt(mealForm.elements.kkal.value, 10);
+      var o = parseInt(mealForm.elements.oqsil.value, 10);
+
+      if (!nomi || !(k > 0) || !(o >= 0)) {
+        mealError.textContent = "Taom nomi, kaloriya va oqsilni to‘g‘ri kiriting.";
+        return;
+      }
+
+      var card = document.createElement("article");
+      card.className = "meal is-new";
+      card.innerHTML =
+        '<div class="meal-img ' + GRADS[added % GRADS.length] + '"><span style="color:rgba(255,255,255,.95)">' + forkIcon + "</span></div>" +
+        '<div class="meal-info"><div class="meal-type"></div><div class="meal-name"></div><div class="meal-meta"></div></div>' +
+        '<button class="meal-remove" type="button" aria-label="O‘chirish">×</button>';
+      // matnlar textContent orqali (xavfsiz)
+      $(".meal-type", card).textContent = turi;
+      $(".meal-name", card).textContent = nomi;
+      $(".meal-meta", card).textContent = k + " kkal · " + o + " g oqsil";
+
+      $(".meal-remove", card).addEventListener("click", function () {
+        kcal -= k;
+        protein -= o;
+        card.remove();
+        updateTotals();
+      });
+
+      mealsBox.appendChild(card);
+      added++;
+      kcal += k;
+      protein += o;
+      updateTotals();
+      closeMeal();
+    });
+  }
+
   /* ---------- Hisobotlar: tablar ---------- */
   var DATA = {
     week: {
