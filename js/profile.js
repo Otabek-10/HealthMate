@@ -33,6 +33,15 @@
   function apply(user) {
     window.HM_USER = user;
 
+    // Ro'yxatdan o'tgan bo'lsa, yuqoridagi tugmalar o'zgaradi
+    document.querySelectorAll("[data-auth-login]").forEach(function (el) {
+      el.textContent = "Kabinetim";
+    });
+    document.querySelectorAll("[data-auth-signup]").forEach(function (el) {
+      el.textContent = "Aloqa";
+      el.setAttribute("href", "#about");
+    });
+
     document.querySelectorAll("[data-user-name]").forEach(function (el) {
       el.textContent = user.ism;
     });

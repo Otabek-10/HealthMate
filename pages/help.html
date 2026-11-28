@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yordam markazi — HealthMate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/help.css" />
+  </head>
+  <body>
+    <!-- YUQORI QISM -->
+    <div class="help-top">
+      <header class="header">
+        <a href="../index.html" class="logo" aria-label="HealthMate">
+          <span class="logo-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M19.5 12.6 12 20l-7.5-7.4a4.9 4.9 0 0 1 0-7 5 5 0 0 1 7 0l.5.5.5-.5a5 5 0 0 1 7 0 4.9 4.9 0 0 1 0 7Z" />
+            </svg>
+          </span>
+          <span class="logo-text">Health<span class="accent">Mate</span></span>
+        </a>
+
+        <nav class="navmid" aria-label="Asosiy menyu">
+          <a class="navlink" href="../index.html#home">Bosh sahifa</a>
+          <a class="navlink" href="../index.html#features">Imkoniyatlar</a>
+          <a class="navlink" href="../index.html#ai">AI yordamchi</a>
+          <a class="navlink is-active" href="help.html">Yordam markazi</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="dashboard.html" class="login-link" data-auth-login>Kirish</a>
+          <a class="btn-primary btn-signup" href="dashboard.html" data-auth-signup>Ro‘yxatdan o‘tish</a>
+        </div>
+      </header>
+
+      <section class="help-hero">
+        <div class="badge">Yordam markazi</div>
+        <h1 class="help-title">
+          Sizga qanday <span class="accent">yordam</span> bera olamiz?
+        </h1>
+        <p class="help-text">
+          Savolingiz bormi? Quyida javob toping yoki bizga xabar yozing —
+          jamoamiz tez orada javob beradi.
+        </p>
+        <form class="help-search" role="search" onsubmit="return false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="7" /><path d="M20 20l-3.5-3.5" />
+          </svg>
+          <input type="search" id="faq-search" placeholder="Savolni qidiring... masalan: suv, AI, parol" aria-label="Savollar bo‘yicha qidiruv" />
+        </form>
+      </section>
+    </div>
+
+    <!-- ALOQA -->
+    <section class="contact" id="contact">
+      <div class="contact-grid">
+        <div class="form-card">
+          <span class="badge badge-sm">Xabar yuborish</span>
+          <h2 class="card-h">Bizga yozing</h2>
+
+          <form class="msg-form" id="msg-form" novalidate>
+            <label>Ismingiz
+              <input type="text" name="ism" placeholder="Masalan: Madina" autocomplete="given-name" required />
+            </label>
+            <label>Elektron pochtangiz (Email)
+              <input type="email" name="email" placeholder="example@mail.com" autocomplete="email" required />
+            </label>
+            <label>Mavzu
+              <input type="text" name="mavzu" placeholder="Xabar mavzusi..." required />
+            </label>
+            <label>Xabaringiz
+              <textarea name="xabar" rows="5" placeholder="Xabaringizni shu yerga yozing..." required></textarea>
+            </label>
+            <p class="form-msg" id="form-msg" role="alert"></p>
+            <button class="btn-primary send-btn" type="submit">
+              Xabarni yuborish
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 2 11 13" /><path d="M22 2 15 22l-4-9-9-4 20-7z" />
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <div class="info-col">
+          <article class="info-card">
+            <span class="info-ic">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 21s7-6.2 7-11.5a7 7 0 0 0-14 0C5 14.8 12 21 12 21z" /><circle cx="12" cy="9.5" r="2.5" />
+              </svg>
+            </span>
+            <div class="info-body">
+              <h3>Manzilimiz</h3>
+              <p>Toshkent shahri, Yunusobod tumani, Amir Temur ko‘chasi, 108-uy</p>
+            </div>
+          </article>
+
+          <article class="info-card">
+            <span class="info-ic">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="3" /><path d="M3 8l9 6 9-6" />
+              </svg>
+            </span>
+            <div class="info-body">
+              <h3>Elektron pochta</h3>
+              <p>support@healthmate.uz<br />info@healthmate.uz</p>
+            </div>
+            <button class="copy-btn" type="button" data-copy="support@healthmate.uz" aria-label="Pochtani nusxalash">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="9" y="9" width="11" height="11" rx="2.5" /><path d="M5 15V6a2 2 0 0 1 2-2h9" />
+              </svg>
+            </button>
+          </article>
+
+          <article class="info-card">
+            <span class="info-ic">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" />
+              </svg>
+            </span>
+            <div class="info-body">
+              <h3>Telefon raqami</h3>
+              <p>+998 (71) 123-45-67<br />+998 (90) 987-65-43</p>
+            </div>
+            <button class="copy-btn" type="button" data-copy="+998711234567" aria-label="Raqamni nusxalash">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="9" y="9" width="11" height="11" rx="2.5" /><path d="M5 15V6a2 2 0 0 1 2-2h9" />
+              </svg>
+            </button>
+          </article>
+
+          <article class="info-card">
+            <span class="info-ic">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" />
+              </svg>
+            </span>
+            <div class="info-body">
+              <h3>Ish vaqti</h3>
+              <p>Dushanba – Shanba: 09:00 – 18:00<br />Yakshanba: Dam olish kuni</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SAVOL-JAVOB -->
+    <section class="faq" id="faq">
+      <div class="faq-inner">
+        <h2 class="faq-title">Ko‘p so‘raladigan <span class="accent">savollar.</span></h2>
+
+        <div class="faq-list" id="faq-list">
+          <article class="faq-item is-open">
+            <button class="faq-q" type="button" aria-expanded="true">
+              <span>HealthMate nima va u nima uchun kerak?</span>
+              <i class="faq-ic" aria-hidden="true"></i>
+            </button>
+            <div class="faq-a"><p>HealthMate — kundalik odatlaringiz (suv, uyqu, qadam, ovqatlanish)ni kuzatib boradigan va AI yordamida shaxsiy tavsiyalar beradigan sog‘lom hayot yordamchisi.</p></div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              <span>Xabarimga qancha vaqtda javob berasiz?</span>
+              <i class="faq-ic" aria-hidden="true"></i>
+            </button>
+            <div class="faq-a"><p>Odatda ish kunlarida 24 soat ichida javob beramiz.</p></div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              <span>HealthMate bepulmi?</span>
+              <i class="faq-ic" aria-hidden="true"></i>
+            </button>
+            <div class="faq-a"><p>Ha, asosiy imkoniyatlar — suv, uyqu, faollik va ovqatlanishni kuzatish — bepul. “Bepul boshlash” tugmasini bosib hoziroq foydalanishingiz mumkin.</p></div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              <span>AI yordamchi qanday ishlaydi?</span>
+              <i class="faq-ic" aria-hidden="true"></i>
+            </button>
+            <div class="faq-a"><p>AI yordamchi kundalik ko‘rsatkichlaringizni o‘rganib, ovqatlanish, uyqu, suv va faollik bo‘yicha sodda hamda shaxsiy tavsiyalar beradi. Unga savol yozish kifoya.</p></div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              <span>Ismim yoki ma’lumotlarimni qanday o‘zgartiraman?</span>
+              <i class="faq-ic" aria-hidden="true"></i>
+            </button>
+            <div class="faq-a"><p>Shaxsiy kabinetda yuqori o‘ngdagi avatar tugmasini bosing va “Profilni tahrirlash” ni tanlang. Ism, familya va yoshni o‘zgartirsangiz, butun ilovada yangilanadi.</p></div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              <span>Ma’lumotlarim xavfsizmi?</span>
+              <i class="faq-ic" aria-hidden="true"></i>
+            </button>
+            <div class="faq-a"><p>Kiritgan ma’lumotlaringiz faqat sizning qurilmangizdagi brauzerda saqlanadi va boshqalarga yuborilmaydi. “Chiqish” tugmasi ularni o‘chirib tashlaydi.</p></div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              <span>Hamkorlik qilish mumkinmi?</span>
+              <i class="faq-ic" aria-hidden="true"></i>
+            </button>
+            <div class="faq-a"><p>Albatta! Yuqoridagi shakl orqali yoki info@healthmate.uz manziliga yozing — hamkorlik takliflaringizni mamnuniyat bilan ko‘rib chiqamiz.</p></div>
+          </article>
+
+          <p class="faq-empty" id="faq-empty" hidden>Hech narsa topilmadi. Savolingizni yuqoridagi shakl orqali yuboring.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="about">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo" aria-label="HealthMate">
+            <span class="logo-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19.5 12.6 12 20l-7.5-7.4a4.9 4.9 0 0 1 0-7 5 5 0 0 1 7 0l.5.5.5-.5a5 5 0 0 1 7 0 4.9 4.9 0 0 1 0 7Z" />
+              </svg>
+            </span>
+            <span class="logo-text">Health<span class="accent">Mate</span></span>
+          </a>
+          <p class="footer-tagline">Sog‘lom hayot uchun aqlli va ishonchli hamrohingiz.</p>
+        </div>
+
+        <nav class="footer-col" aria-label="Mahsulot">
+          <h3>Mahsulot</h3>
+          <ul>
+            <li><a href="dashboard.html">Shaxsiy kabinet</a></li>
+            <li><a href="tracker.html">Kunlik odatlar</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-col" aria-label="Yordam">
+          <h3>Yordam</h3>
+          <ul>
+            <li><a href="help.html">Yordam markazi</a></li>
+            <li><a href="#">Maxfiylik</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">© 2026 HealthMate. Barcha huquqlar himoyalangan.</div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="../js/profile.js" defer></script>
+    <script src="../js/help.js" defer></script>
+  </body>
+</html>
